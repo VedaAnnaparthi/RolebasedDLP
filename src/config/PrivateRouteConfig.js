@@ -30,6 +30,7 @@ import {
   import LearnerDashboard from "../pages/Learner/Pages/LearnerDashboard";
 import ClientDashboard from "../pages/Client/Pages/ClientDashbord";
 import ManagerDashboard from "../pages/BranchManager/Pages/ManagerDashboard";
+import Courses from "../pages/BranchManager/Pages/ManagerCourses";
 
   export default [
    
@@ -66,6 +67,14 @@ import ManagerDashboard from "../pages/BranchManager/Pages/ManagerDashboard";
       path: "/managerDashboard",
       icon: <FcDepartment />,
       title: "Dashboard",
+      permission: [Roles.manager],
+      
+    },
+    {
+      component: Courses,
+      path: "/courses",
+      icon: <FcDepartment />,
+      title: "Courses",
       permission: [Roles.manager],
     },
   ];
