@@ -46,6 +46,55 @@ import ClientReports from "../pages/client/pages/ClientReports/ClientReports";
 
 
 import ManagerDashboard from "../pages/BranchManager/Pages/ManagerDashboard";
+import Courses from "../pages/BranchManager/Pages/ManagerCourses";
+
+  export default [
+   
+    {
+      component: AdminDashboard,
+      path: "/adminDashboard",
+      icon: <FcManager />,
+      title: "Dashboard",
+      permission: [Roles.admin],
+    },
+    {
+      component: CreatorDashboard,
+      path: "/creatorDashboard",
+      icon: <FcCalendar />,
+      title: "Dashboard",
+      permission: [Roles.creator],
+    },
+    {
+      component: LearnerDashboard,
+      path: "/learnerDashboard",
+      icon: <FcReading />,
+      title: "Dashboard",
+      permission: [Roles.learner],
+    },
+    {
+      component: ClientDashboard,
+      path: "/clientDashboard",
+      icon: <FcNeutralTrading />,
+      title: "Dashboard",
+      permission: [Roles.client],
+    },   
+    {
+      component: ManagerDashboard,
+      path: "/managerDashboard",
+      icon: <FcDepartment />,
+      title: "Dashboard",
+      permission: [Roles.manager],
+      
+    },
+    {
+      component: Courses,
+      path: "/courses",
+      icon: <FcDepartment />,
+      title: "Courses",
+      permission: [Roles.manager],
+    },
+  ];
+ 
 import { SiBookstack } from "react-icons/si";
 import LearnerCourses from "../pages/Learner/pages/Courses/LearnerCourses";
 import { MdSpaceDashboard } from "react-icons/md";
@@ -177,3 +226,4 @@ export default [
 
   
 ];
+
