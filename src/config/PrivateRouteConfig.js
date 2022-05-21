@@ -23,6 +23,11 @@ import Roles from "./Roles";
 
 //Custom Component Imports
 
+import AdminDashboard from "../pages/SuperAdmin/Pages/Dashboard";
+import CreatorDashboard from "../pages/Creator/Pages/CreatorDashboard";
+import LearnerDashBoard from "../pages/Learner/pages/Dashboard/LearnerDashboard";
+import ClientDashboard from "../pages/Client/Pages/ClientDashbord";
+
 
 
 import AdminDashboard from "../pages/SuperAdmin/Pages/Dashboard";
@@ -39,8 +44,49 @@ import ClientReports from "../pages/client/pages/ClientReports/ClientReports";
 // client imports ends..
 
 
-import ManagerDashboard from "../pages/BranchManager/Pages/ManagerDashboard";
 
+import ManagerDashboard from "../pages/BranchManager/Pages/ManagerDashboard";
+import { SiBookstack } from "react-icons/si";
+import LearnerCourses from "../pages/Learner/pages/Courses/LearnerCourses";
+import { MdSpaceDashboard } from "react-icons/md";
+export default [
+  {
+    component: AdminDashboard,
+    path: "/adminDashboard",
+    icon: <FcManager />,
+    title: "Dashboard",
+    permission: [Roles.admin],
+  },
+  {
+    component: CreatorDashboard,
+    path: "/creatorDashboard",
+    icon: <FcCalendar />,
+    title: "Dashboard",
+    permission: [Roles.creator],
+  },
+  {
+    component: LearnerDashBoard,
+    path: "/learnerDashboard",
+    icon: <MdSpaceDashboard/>,
+    title: "Dashboard",
+    permission: [Roles.learner],
+  },
+
+  {
+    component:LearnerCourses,
+    path: "/learnerCourses",
+    title: "Courses",
+    icon: <SiBookstack />,
+    permission: [Roles.learner],
+  },
+
+  {
+    component: ClientDashboard,
+    path: "/clientDashboard",
+    icon: <FcNeutralTrading />,
+    title: "Dashboard",
+    permission: [Roles.client],
+  },
 export default [
 
   {
@@ -120,6 +166,7 @@ export default [
   // Client Routes Ends
 
   // Manager Routes Starts
+
   {
     component: ManagerDashboard,
     path: "/managerDashboard",
@@ -127,5 +174,6 @@ export default [
     title: "Dashboard",
     permission: [Roles.manager],
   },
+
   
 ];
