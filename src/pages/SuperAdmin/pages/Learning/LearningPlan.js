@@ -1,6 +1,6 @@
 import React from "react";
 
-import Sidebar from "../../NavBar/Sidebar";
+
 
 const LearningPlans = () => {
   return (

@@ -24,6 +24,11 @@ import Roles from "./Roles";
 //Custom Component Imports
 
 import AdminDashboard from "../pages/SuperAdmin/pages/Dashboard/AdminDashboard";
+import ContentCreatorManagement from "../pages/SuperAdmin/pages/ContentCreatorManagement/ContentCreatorManagement"
+import CourseManagement from "../pages/SuperAdmin/pages/CourseManagement/CourseManagement"
+import LearningPlan from "../pages/SuperAdmin/pages/Learning/LearningPlan"
+import Reports from "../pages/SuperAdmin/pages/Reports/Reports"
+
 import CreatorDashboard from "../pages/Creator/Pages/CreatorDashboard";
 import CreatorStudio from "../pages/Creator/Pages/CreatorStudio";
 import Feedback from "../pages/Creator/Pages/Feedback";
@@ -59,6 +64,41 @@ import { SiBookstack } from "react-icons/si";
       title: "Dashboard",
       permission: [Roles.admin],
     },
+
+    {
+      component: ContentCreatorManagement,
+      path: "/adminCreatorManagement",
+      icon: <FcManager />,
+      title: "Creator Management",
+      permission: [Roles.admin],
+    },
+
+    {
+      component: CourseManagement,
+      path: "/adminCourseManagement",
+      icon: <FcManager />,
+      title: "Course Management",
+      permission: [Roles.admin],
+    },
+
+
+    {
+      component: LearningPlan,
+      path: "/adminLearning",
+      icon: <FcManager />,
+      title: "Learning Plans",
+      permission: [Roles.admin],
+    },
+
+    {
+      component: Reports,
+      path: "/adminReports",
+      icon: <FcManager />,
+      title: "Reports",
+      permission: [Roles.admin],
+    },
+
+
     {
       component: CreatorDashboard,
       path: "/creatorDashboard",
@@ -90,7 +130,42 @@ import { SiBookstack } from "react-icons/si";
       icon: <FcNeutralTrading />,
       title: "Dashboard",
       permission: [Roles.client],
-    },   
+    },    
+{
+  component: ClientLearner,
+  path: "/clientLearnerManagement",
+  icon: <FcReading />,
+  title: "Learner Management",
+  permission: [Roles.client],  
+  },
+  {
+  component: ClientCourse,
+  path: "/clientCourseManagement",
+  icon: <FcReading />,
+  title: "Course Management",
+  permission: [Roles.client],
+  },
+  {
+  component: ClientPayment,
+  path: "/clientPaymentInfo",
+  icon: <FcReading />,
+  title: "Payment Info",
+  permission: [Roles.client], 
+  },
+  {
+  component: ClientProfile,
+  path: "/clientProfile",
+  icon: <FcReading />,
+  title: "Client Profile",
+  permission: [Roles.client],
+  },
+  {
+  component: ClientReports,
+  path: "/clientReports",
+  icon: <FcReading />,
+  title: "Client Reports",
+  permission: [Roles.client], 
+  },
     {
       component: ManagerDashboard,
       path: "/managerDashboard",
