@@ -104,7 +104,5 @@ import { SiBookstack } from "react-icons/si";
       title: "Courses",
       permission: [Roles.learner]
     }
-
-
   ];
  
