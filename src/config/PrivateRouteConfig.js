@@ -25,6 +25,8 @@ import Roles from "./Roles";
 
 import AdminDashboard from "../pages/SuperAdmin/pages/Dashboard/AdminDashboard";
 import CreatorDashboard from "../pages/Creator/Pages/CreatorDashboard";
+import CreatorStudio from "../pages/Creator/Pages/CreatorStudio";
+import Feedback from "../pages/Creator/Pages/Feedback";
 //Learnerdashboard 
 import LearnerDashBoard  from "../pages/Learner/pages/Dashboard/LearnerDashboard";
 import LearnerCourses from "../pages/Learner/pages/Courses/LearnerCourses";
@@ -62,6 +64,22 @@ import { SiBookstack } from "react-icons/si";
       path: "/creatorDashboard",
       icon: <FcCalendar />,
       title: "Dashboard",
+      permission: [Roles.creator],
+    },
+
+    {
+      component: CreatorStudio,
+      path: "/creatorStudio",
+      icon: <FcCalendar />,
+      title: "Creator Studio",
+      permission: [Roles.creator],
+    },
+
+    {
+      component: Feedback,
+      path: "/creatorFeedback",
+      icon: <FcCalendar />,
+      title: "Feedback",
       permission: [Roles.creator],
     },
     

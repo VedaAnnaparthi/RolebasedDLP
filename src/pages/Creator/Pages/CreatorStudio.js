@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const CreatorStudio = () => {
+const CreatorStudio = () => {
   return (
     <div>CreatorStudio</div>
   )
 };
+
+export default CreatorStudio
