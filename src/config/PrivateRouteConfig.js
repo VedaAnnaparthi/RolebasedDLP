@@ -46,7 +46,7 @@ import ClientCourse from "../pages/client/pages/CourseManagement/ClientCourse";
 import ClientPayment from "../pages/client/pages/PaymentInfo/ClientPayment";
 import ClientProfile from "../pages/client/pages/ClientProfile/ClientProfile";
 import ClientReports from "../pages/client/pages/ClientReports/ClientReports";
-
+import BranchManagement from "../pages/client/pages/BranchManagement/BranchManagement"
 // client imports ends..
 
 
@@ -166,6 +166,16 @@ import { SiBookstack } from "react-icons/si";
   title: "Client Reports",
   permission: [Roles.client], 
   },
+
+  {
+    component: BranchManagement,
+    path: "/clientBranchManagement",
+    icon: <FcReading />,
+    title: "Branch Management",
+    permission: [Roles.client], 
+    },
+
+
     {
       component: ManagerDashboard,
       path: "/managerDashboard",
