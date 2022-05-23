@@ -23,13 +23,12 @@ import Roles from "./Roles";
 
 //Custom Component Imports
 
-import AdminDashboard from "../pages/SuperAdmin/Pages/Dashboard";
+import AdminDashboard from "../pages/SuperAdmin/pages/Dashboard/AdminDashboard";
 import CreatorDashboard from "../pages/Creator/Pages/CreatorDashboard";
 //Learnerdashboard 
 import LearnerDashBoard  from "../pages/Learner/pages/Dashboard/LearnerDashboard";
 import LearnerCourses from "../pages/Learner/pages/Courses/LearnerCourses";
 
-import ClientDashboard from "../pages/Client/Pages/ClientDashbord";
 
 
 
@@ -68,7 +67,7 @@ import { SiBookstack } from "react-icons/si";
     
     
     {
-      component: ClientDashboard,
+      component: ClientDashBoard,
       path: "/clientDashboard",
       icon: <FcNeutralTrading />,
       title: "Dashboard",
@@ -89,5 +88,23 @@ import { SiBookstack } from "react-icons/si";
       title: "Courses",
       permission: [Roles.manager],
     },
+
+    {
+      component: LearnerDashBoard,
+      path : "/learnerDashboard",
+      icon : <FcManager/>,
+      title: "Dashboard",
+      permission: [Roles.learner],
+    },
+
+    {
+      component: LearnerCourses,
+      path : "/learnerCourses",
+      icon : <FcManager/>,
+      title: "Courses",
+      permission: [Roles.learner]
+    }
+
+
   ];
  
